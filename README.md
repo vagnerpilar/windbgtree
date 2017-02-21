@@ -2,7 +2,9 @@
 =============
 
 WinDBGtree is a Microsoft WinDbg command tree that expands the set of available commands by Microsoft WinDbg, 
-Windbgtree aims at making life easier for windows kernel researchers, troubleshooters and security experts with a series of debugging, incident response and memory forensics commands. 2016 Contest
+Windbgtree aims at making life easier for windows kernel researchers, troubleshooters and security experts with a series of debugging, incident response and memory forensics commands. 
+
+This cmdtree has been created by Vagner Pilar @vagnerpilar – feel free to reach out on https://twitter.com/vagnerpilar asking for more features or offer to contribute.
 
 # Installation
 ===============
@@ -16,8 +18,8 @@ kd> .cmdtree C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\windbgtree.txt
 
 PS.: In order to get all extensions working properly, please make sure we have SwishdbgExt, DBGKit and MEX already configured.
 
-SwishdbgExt - https://github.com/comaeio/SwishDbgExt;
-
-DBGkit - http://www.andreybazhan.com/dbgkit.html;
-
+```
+SwishdbgExt - https://github.com/comaeio/SwishDbgExt
+DBGkit - http://www.andreybazhan.com/dbgkit.html
 MEX - https://www.microsoft.com/en-us/download/details.aspx?id=53304
+```
