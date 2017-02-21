@@ -6,6 +6,8 @@ Windbgtree aims at making life easier for windows kernel researchers, troublesho
 You can either copy the WinDbgtree.txt file in the corresponding (x86 or x64) WinDbg folder or load it manually using the .cmdtree command such as below. 
 
 # Example:
+```
 kd> ..cmdtree C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\windbgtree.txt
+```
 
 PS.: In order to get all extensions working properly, please make sure we have SwishdbgExt, DBGKit and MEX already configured.
