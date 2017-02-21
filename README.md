@@ -1,2 +1,2 @@
 # windbgtree
-A cmdtree with commands and extensions for kernel debugging.
+A cmdtree based on commands and extensions for Windows kernel debugging using WinDBG.
