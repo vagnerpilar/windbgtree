@@ -16,6 +16,6 @@ kd> .cmdtree C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\windbgtree.txt
 
 PS.: In order to get all extensions working properly, please make sure we have SwishdbgExt, DBGKit and MEX already configured.
 
-SwishdbgExt - https://github.com/comaeio/SwishDbgExt
-DBGkit - http://www.andreybazhan.com/dbgkit.html
+SwishdbgExt - https://github.com/comaeio/SwishDbgExt;
+DBGkit - http://www.andreybazhan.com/dbgkit.html;
 MEX - https://www.microsoft.com/en-us/download/details.aspx?id=53304
