@@ -17,10 +17,12 @@ You can copy the WinDbgtree.txt file in the corresponding (x86 or x64) WinDbg fo
 kd> .cmdtree C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\windbgtree.txt
 ```
 
-PS.: In order to get all extensions working properly, please make sure we have SwishdbgExt, DBGKit and MEX already configured.
+PS.: In order to get all extensions working properly, please make sure we have SwishdbgExt, DBGKit, MEX, Wdbgark and Patterns already configured.
 
 ```
 SwishdbgExt - https://github.com/comaeio/SwishDbgExt (Thanks to Matt Suiche (@msuiche))
 DBGkit - http://www.andreybazhan.com/dbgkit.html (Kuddos to @AndreyBazhan)
 MEX - https://www.microsoft.com/en-us/download/details.aspx?id=53304
+WinDBG Anti-RootKit Extension - https://github.com/swwwolf/wdbgark
+Patterns Debugger Extension DLL - http://www.patterndiagnostics.com/patterns-extension
 ```
