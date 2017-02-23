@@ -22,7 +22,7 @@ PS.: In order to get all extensions working properly, please make sure we have S
 ```
 SwishdbgExt - https://github.com/comaeio/SwishDbgExt (Thanks to Matt Suiche (@msuiche))
 DBGkit - http://www.andreybazhan.com/dbgkit.html (Kuddos to @AndreyBazhan)
-MEX - https://www.microsoft.com/en-us/download/details.aspx?id=53304
-WinDBG Anti-RootKit Extension - https://github.com/swwwolf/wdbgark
+MEX - https://www.microsoft.com/en-us/download/details.aspx?id=53304 (kuddos to Microsoft)
+WinDBG Anti-RootKit Extension - https://github.com/swwwolf/wdbgark (Kuddos to Vyacheslav Rusakoff @@swwwolf)
 Patterns Debugger Extension DLL - http://www.patterndiagnostics.com/patterns-extension
 ```
