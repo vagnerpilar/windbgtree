@@ -8,6 +8,7 @@ This WinDBGtree has been created by Vagner Pilar @vagnerpilar (Twitter) – Feel
 
 # Installation
 ===============
+
 You can copy the WinDbgtree.txt file in the corresponding (x86 or x64) WinDbg folder and load it manually using the .cmdtree command such as below or adding the path on the WinDBG shortcut.
 
 # Example:
