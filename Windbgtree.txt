@@ -67,6 +67,7 @@ body
   {"Unassemble function"} {"uf ExAllocatePool"}
  {"Networking"}
   {"Ndiskd in details"} {"!ndiskd.netreport -verbose"}
+  {"Port Exhaustion"} {".load mex; !mex.afd -conn -report -verbose"}
   {"Ndiskd Miniport"} {"!ndiskd.miniports"}
   {"Ndiskd Protocols"} {"!ndiskd.protocols"}
   {"Checking vswitch Config"} {"!nvkd.vswitch"}
