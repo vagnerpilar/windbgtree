@@ -22,6 +22,7 @@ body
   {"Memory Info"} {"!sysinfo smbios"}
   {"Slots"} {"!pcitree"}
   {"Device tree GUI"} {".load dbgkit; !dv"}
+  {"Resource Conflict check"} {"!arbiter 1"}
   {"Device tree"} {"!devnode 0 9"}
   {"Object Explorer"} {".load dbgkit; !ob"}
   {"HID device"} {"!hidkd.hidtree"}
