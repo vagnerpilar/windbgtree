@@ -124,6 +124,7 @@ body
   {"Power Capabilities"} {"!pocaps"}
   {"Power IRPs"} {"!poreqlist"}
   {"Current Power"} {"!poaction"}
+  {"CPPC"} {"!wdfkd.wdflogdump amdppm -d"}
   {"Dumps the device node with the power state and all attached devices"} {"!devpowerstate"}
 {"Memory Analysis Checklist for System Hang"}
  {"Check list"} {".load patterns; !chk S"}
