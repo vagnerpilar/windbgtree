@@ -26,4 +26,7 @@ DBGkit - http://www.andreybazhan.com/dbgkit.html (Kuddos to @AndreyBazhan)
 MEX - https://www.microsoft.com/en-us/download/details.aspx?id=53304 (kuddos to Microsoft)
 WinDBG Anti-RootKit Extension - https://github.com/swwwolf/wdbgark (Kuddos to Vyacheslav Rusakoff @@swwwolf)
 Patterns Debugger Extension DLL - http://www.patterndiagnostics.com/patterns-extension
+Blue WinDBG - http://kdext.com/extensions/uienh_mchl.html
+PoolInfo - https://github.com/fishstiqz/poolinfo
+Windbg extension to find PatchGuard pages - https://github.com/tandasat/findpg
 ```
