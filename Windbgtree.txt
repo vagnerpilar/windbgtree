@@ -5,8 +5,8 @@ body
  {"Logging"}
   {"Open Log"} {".logopen /t /u C:\Customers\Debugging.txt"}
   {"Close Log"} {".logclose"}
-  {"Loading Patterns"} {".load patterns"}
-  {"Loading Blue WinDBG"} {".load blwdbgue"}
+  {"Loading Patterns"} {".load C:\Program Files (x86)\Windows Kits\10\Debuggers\x86\patterns.dll"}
+  {"Loading Blue WinDBG"} {".load C:\Program Files (x86)\Windows Kits\10\Debuggers\x86\blwdbgue.dll"}
  {"Dump Info"}
   {"Bugcheck Args & System Uptime"} {"!analyze -show bugcheck; .time"}
   {"Dump Header"} {".dumpdebug"}
@@ -21,16 +21,16 @@ body
   {"CPU Info"} {"!sysinfo cpuinfo"}
   {"Memory Info"} {"!sysinfo smbios"}
   {"Slots"} {"!pcitree"}
-  {"Device tree GUI"} {".load dbgkit; !dv"}
+  {"Device tree GUI"} {".load C:\Program Files (x86)\Windows Kits\10\Debuggers\x86\dbgkit.dll; !dv"}
   {"Resource Conflict check"} {"!arbiter 1"}
   {"Device tree"} {"!devnode 0 9"}
-  {"Object Explorer"} {".load dbgkit; !ob"}
+  {"Object Explorer"} {".load C:\Program Files (x86)\Windows Kits\10\Debuggers\x86\dbgkit.dll; !ob"}
   {"HID device"} {"!hidkd.hidtree"}
   {"SymbolicLinks"} {"!object \Global??\"}
-  {"Registry Hives"} {".load swishdbgext;!ms_hivelist"}
+  {"Registry Hives"} {".load C:\Program Files (x86)\Windows Kits\10\Debuggers\x86\swishdbgext.dll;!ms_hivelist"}
   {"Registry Consumed Pool"} {"!reg dumppool"}
   {"Terminal Server?"} {"!session"}
-  {"Services"} {".load swishdbgext;!ms_services"}
+  {"Services"} {".load C:\Program Files (x86)\Windows Kits\10\Debuggers\x86\swishdbgext.dll;!ms_services"}
  {"Driver Info"}
   {"3rd party drivers"} {"lme"}
   {"Plug and Play triage"} {"!pnptriage"}
@@ -44,35 +44,36 @@ body
   {"List all Running with Stack"} {"!running -it"}
   {"Process with DML"} {"!dml_proc"}
   {"Process"} {"!process 0 7"}
-  {"Process Explorer"} {".load dbgkit;!ps"}
-  {"Process Path"} {".load swishdbgext; !ms_process"}
+  {"Process Explorer"} {".load C:\Program Files (x86)\Windows Kits\10\Debuggers\x86\dbgkit.dll;!ps"}
+  {"Process Path"} {".load C:\Program Files (x86)\Windows Kits\10\Debuggers\x86\swishdbgext.dll; !ms_process"}
   {"RAW Stacks"} {"dps esp-3000 esp+3000"}
   {"Stacks"} {"!stacks"}
   {"Displays stacks"} {"kcn"}
   {"Locks"} {"!locks"}
-  {"Exclusive Owner"} {".load mex; !eresource -v"}
+  {"Exclusive Owner"} {".load C:\Program Files (x86)\Windows Kits\10\Debuggers\x86\mex.dll; !eresource -v"}
   {"Running"} {"!running"}
-  {"File Server"} {".load mex; !fileserver"}
+  {"File Server"} {".load C:\Program Files (x86)\Windows Kits\10\Debuggers\x86\mex.dll; !fileserver"}
   {"Ready"} {"!ready"}
   {"Dump active Pnp thread if any"} {"!pnpthread"}
   {"Exqueue W2K2008R2"} {"!exqueue /f"}
-  {"Exqueue WS2012 R2"} {".load swishdbgext; !ms_exqueue"}
+  {"Exqueue WS2012 R2"} {".load C:\Program Files (x86)\Windows Kits\10\Debuggers\x86\swishdbgext.dll; !ms_exqueue"}
+ {"Networking"}
+  {"Ndiskd in details"} {"!ndiskd.netreport -verbose"}
+  {"Port Exhaustion"} {".load C:\Program Files (x86)\Windows Kits\10\Debuggers\x86\mex.dll; !mex.afd -conn -report -verbose"}
+  {"Ndiskd Miniport"} {"!ndiskd.miniports"}
+  {"Ndiskd Protocols"} {"!ndiskd.protocols"}
+  {"Checking vswitch Config"} {"!nvkd.vswitch"}
+  {"Checking IP Address"} {"dpu poi(srvnet!SrvAdminIpAddressList)"}
  {"Memory"}
   {"Virtual Memory"} {"!vm 4"}
   {"Pagefile Info"} {"!pagefile"}
-  {"RAMmap"} {".load dbgkit;!mm"}
+  {"RAMmap"} {".load C:\Program Files (x86)\Windows Kits\10\Debuggers\x86\dbgkit.dll;!mm"}
   {"Working Set"} {"!process 0 1"}
   {"Fragmentation"} {"!frag"}
   {"Search memory with Tag"} {".echo !for_each_module s-a @#Base @#End "<tag>""}
   {"Checking Tag"} {".asm no_code_bytes"}
   {"Unassemble function"} {"uf ExAllocatePool"}
- {"Networking"}
-  {"Ndiskd in details"} {"!ndiskd.netreport -verbose"}
-  {"Port Exhaustion"} {".load mex; !mex.afd -conn -report -verbose"}
-  {"Ndiskd Miniport"} {"!ndiskd.miniports"}
-  {"Ndiskd Protocols"} {"!ndiskd.protocols"}
-  {"Checking vswitch Config"} {"!nvkd.vswitch"}
-  {"Checking IP Address"} {"dpu poi(srvnet!SrvAdminIpAddressList)"}
+  {"Pool list"} {".load C:\Program Files (x86)\Windows Kits\10\Debuggers\x86\poolinfo.dll; !poollist"}
  {"Storage and I/O Commands"}
   {"Disk"} {"!scsikd.classext"}
   {"DevNode Disk"} {"!devnode 0 1 disk"}
@@ -80,8 +81,8 @@ body
   {"Check Throttles"} {"!defwrites"}
   {"Storage"} {"!storagekd.storadapter"}
   {"IOCTL code"} {"!ioctldecode"}
-  {"Show disk cluster"} {".load mex;!clusdisk"}
-  {"VSS"} {".load mex;!vss"}
+  {"Show disk cluster"} {".load C:\Program Files (x86)\Windows Kits\10\Debuggers\x86\mex.dll;!clusdisk"}
+  {"VSS"} {".load C:\Program Files (x86)\Windows Kits\10\Debuggers\x86\mex.dll;!vss"}
   {"File System"} {"!object \Filesystem"}
   {"Drive Info C:\"} {"!driveinfo C:"}
   {"Drive Info D:\"} {"!driveinfo D:"}
@@ -98,7 +99,7 @@ body
   {"Detailing PCR timeout"} {"dt nt!_KPRCB XX Dpc*"}
   {"Multithread Processor Info"} {"!smt"}
   {"Display Status of each Processor"} {"!frozen"}
-  {"Display NUMA information" {"!numa"}
+  {"Display NUMA information"} {"!numa"}
  {"USB details"}
   {"USB2"}
    {"usb2tree"} {"!usbkd.usb2tree"}
@@ -115,10 +116,11 @@ body
   {"List WHEA"} {"!whea"}
   {"WHEA Structs"} {".echo _WHEA_ERROR_RECORD, _WHEA_ERROR_RECORD_HEADER,_WHEA_ERROR_RECORD_HEADER_VALIDBITS, _WHEA_TIMESTAMP,_WHEA_ERROR_SOURCE_TYPE, _WHEA_ERROR_PACKET,"}
  {"Forensics"}
-  {"Scanning LSASS.EXE"} {".load perflib; !process 0 0 lsass.exe"}
+  {"Scanning LSASS.EXE"} {".load C:\Program Files (x86)\Windows Kits\10\Debuggers\x86\perflib.dll; !process 0 0 lsass.exe"}
   {"Running Mimikatz"} {"!mimikatz"}
-  {"Checking exploitability "} {".load MSEC; !exploitable"}
-  {"Anti-RootKit Scan"} {".load wdbgark; !wa_scan"}
+  {"Checking exploitability "} {".load C:\Program Files (x86)\Windows Kits\10\Debuggers\x86\MSEC.dll; !exploitable"}
+  {"Anti-RootKit Scan"} {".load C:\Program Files (x86)\Windows Kits\10\Debuggers\x86\wdbgark.dll; !wa_scan"}
+  {"Kernel Pages by PatchGuard"} {".load C:\Program Files (x86)\Windows Kits\10\Debuggers\x86\findpg.dll; !findpg"}
  {"Power"}
   {"Power Policy"} {"!popolicy"}
   {"Power Capabilities"} {"!pocaps"}
@@ -127,7 +129,7 @@ body
   {"CPPC"} {"!wdfkd.wdflogdump amdppm -d"}
   {"Dumps the device node with the power state and all attached devices"} {"!devpowerstate"}
 {"Memory Analysis Checklist for System Hang"}
- {"Check list"} {".load patterns; !chk S"}
+ {"Check list"} {".load C:\Program Files (x86)\Windows Kits\10\Debuggers\x86\patterns.dll; !chk S"}
 {"User Space Debugging"}
  {"Information"}
   {"Open help"} {".hh"}
